@@ -1,27 +1,22 @@
 
 import 'package:flutter/material.dart';
-import 'package:geolocator/geolocator.dart';
+import 'package:health/src/home.dart';
 
+void main() => runApp(MyApp());
 
-
-void main(){
-
-
-  runApp(MaterialApp(
-    home: Scaffold(
-      backgroundColor: Colors.blueGrey,
-      appBar: AppBar(
-        title: Text("HealthCare Finder"),
-        backgroundColor: Colors.blueGrey[900],
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'KMHFL Locator',
+      theme: ThemeData(
+        primarySwatch: Colors.blueGrey,
       ),
-      body: Image(
-            image:
-                AssetImage('images/healthcare.jpg'),
-          ),
-
-    ),
-  ));
+      debugShowCheckedModeBanner: false,
+      home: MyHomePage(),
+    );
+  }
+}
 
 
 
-} //end of main
